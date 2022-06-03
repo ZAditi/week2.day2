@@ -32,12 +32,13 @@ public class CreateContact {
 		driver.findElement(By.id("createContactForm_primaryEmail")).sendKeys("a@a.com");
 		WebElement state = driver.findElement(By.id("createContactForm_generalStateProvinceGeoId"));
 		Select State = new Select(state);
-		State.selectByVisibleText("Arkansas");
+		State.selectByVisibleText("New York");
 		driver.findElement(By.className("smallSubmit")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.id("updateContactForm_description")).clear();
 		driver.findElement(By.id("updateContactForm_importantNote")).sendKeys("Important");
 		driver.findElement(By.xpath("//input[@value='Update']")).click();
+		System.out.println("Title: "+ driver.getTitle());
 		
 
 
